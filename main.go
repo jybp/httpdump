@@ -20,7 +20,7 @@ func run() error {
 	var port int
 	var multipartform bool
 	flag.IntVar(&port, "p", 8080, "Port")
-	flag.BoolVar(&multipartform, "multipart", false, "Will attempt to parse multipart/form-data requests")
+	flag.BoolVar(&multipartform, "multipart", false, "Attempt to parse multipart/form-data requests")
 	flag.Parse()
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
